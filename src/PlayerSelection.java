@@ -5,11 +5,11 @@
 // Practice  All concepts (variables, casting, increment/decrement, boolean logic,
 //if/else, nested ifs, switch, fall-through, ternary)
 
-import java.util.Scanner;
+import java.util.Scanner;                 // importing Scanner
 
 public class PlayerSelection {
     public static void main(String[] args){
-        String name;
+        String name;                       // Initialization of variables
         int age;
         float height;
         float weight;
@@ -20,7 +20,7 @@ public class PlayerSelection {
         String eligibility;
         String attackerJersey;
 
-        Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);                   // Receiving Input from the keyboard
         System.out.print("Enter your name: ");
         name = sc.nextLine();
         System.out.print("Enter your age: ");
@@ -33,7 +33,7 @@ public class PlayerSelection {
         jersey = sc.nextInt();
 
 
-        int meter = 100;
+        int meter = 100;                                       // Conversion of certain variables
         double pound = 0.45359237;
         double kilogram_weight = pound * weight;
         double height_cm = height * meter;
@@ -41,13 +41,13 @@ public class PlayerSelection {
         int converted_weight = (int) kilogram_weight;
 
 
-        if (age < 18 || converted_weight > 90 || age > 35)
+        if (age < 18 || converted_weight > 90 || age > 35)           // checking eligibility
             eligibility = "Not eligible";
         else
             eligibility="Eligible";
 
 
-        if (age < 20) {
+        if (age < 20) {                                 // Determining category
             System.out.print("Rising Star");
             category = "Rising Star";
         }
@@ -59,7 +59,7 @@ public class PlayerSelection {
         }
 
 
-        switch (jersey) {
+        switch (jersey) {                                  // Assigning position based on jersey number
             case 1:
                 position = "Goalkeeper";
                 break;
@@ -131,11 +131,11 @@ public class PlayerSelection {
 
         if (jersey == 7 || jersey == 9 || jersey == 11 || jersey == 10) {
             attackerJersey = "Yes";
-        }
+        }                                                //Checking to see if jersey is an attacker jersey
         else
             attackerJersey = "No";
 
-        if (category == "Prime Player") {
+        if (category == "Prime Player") {            // Determining the lineup
             if (converted_weight < 80) {
                 lineup = "Starting Lineup";
             }
@@ -145,10 +145,10 @@ public class PlayerSelection {
 
 
 
-        String finalDecision = ((age < 18) || (age > 35) || (weight > 90)) ? "Play" : "Rest";
+        String finalDecision = ((age < 18) || (age > 35) || (weight > 90)) ? "Play" : "Rest"; // final decision check
 
 
-        System.out.println();
+        System.out.println();                        // Displaying results
         System.out.println("Player Report");
         System.out.println("Player Name: " + name);
         System.out.println("Player Age: " + age + "("+category+")");
