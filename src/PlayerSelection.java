@@ -1,5 +1,5 @@
 // Ashesi Premier League
-// Amy Ruth D. Addo
+// Amy Ruth Doe Addo
 // 22/09/2025
 // Purpose: To enlist a player to the Ashesi Football team
 // Practice  All concepts (variables, casting, increment/decrement, boolean logic,
